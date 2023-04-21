@@ -1,6 +1,7 @@
 FROM centos:latest
 MAINTAINER surya.udhaya@gmail.com
-RUN yum -y update && \
+RUN sudo sed -i -e "s|mirrorlist=|#mirrorlist=|g" /etc/yum.repos.d/CentOS-*
+    yum -y update && \
     yum -y install httpd && \
     yum -y install zip unzip && \
     rm -rf /var/cache/yum/*
