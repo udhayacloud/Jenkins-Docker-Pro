@@ -1,8 +1,7 @@
 FROM centos:latest
 LABEL maintainer="udhaya.sri@gmail.com"
 
-RUN dnf update -y
-RUN dnf upgrade -y
+
 RUN dnf install epel-release -y
 RUN dnf install httpd -y
 RUN dnf install zip -y
